@@ -29,6 +29,10 @@ class App extends Component {
     this.setState({cartList: filteredList})
   }
 
+  increaseItemQuantity = id => {
+    const {cartList} = this.state
+  }
+
   render() {
     const {cartList} = this.state
     return (

@@ -185,3 +185,8 @@
     background-color: #e6f6ff;
   }
 }
+
+.cart-count-badge {
+  margin-left: 5px;
+  background-color: #bfdbfe;
+}

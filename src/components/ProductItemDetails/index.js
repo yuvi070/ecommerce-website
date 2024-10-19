@@ -118,15 +118,22 @@ class ProductItemDetails extends Component {
       rating,
       title,
       totalReviews,
+      id,
     } = productData
 
     return (
       <CartContext.Consumer>
         {value => {
-          const {addCartItem} = value
+          const {addCartItem, cartList} = value
           const onClickAddToCart = () => {
-            addCartItem({...productData, quantity})
+            const isExist = cartList.find(each => each.id === id)
+            if (isExist !== undefined) {
+              // updating the quantity in the cart page :)
+            } else {
+              addCartItem({...productData, quantity})
+            }
           }
+
           return (
             <div className="product-details-success-view">
               <div className="product-details-container">
